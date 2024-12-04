@@ -1,4 +1,4 @@
-module terraform-provider-openstatus
+module github.com/itoam/terraform-provider-openstatus
 
 go 1.21.6
 

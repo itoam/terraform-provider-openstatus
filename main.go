@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"terraform-provider-openstatus/internal/provider"
+	"github.com/itoam/terraform-provider-openstatus/internal/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 )

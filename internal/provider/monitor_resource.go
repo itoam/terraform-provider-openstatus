@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"strconv"
 
-	"terraform-provider-openstatus/client"
-	"terraform-provider-openstatus/internal/resource_monitor"
+	"github.com/itoam/terraform-provider-openstatus/client"
+	"github.com/itoam/terraform-provider-openstatus/internal/resource_monitor"
 
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource"

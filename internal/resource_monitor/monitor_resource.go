@@ -9,8 +9,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/booldefault"
-	"github.com/hashicorp/terraform-plugin-framework/resource/schema/numberplanmodifier"
-	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
@@ -125,13 +123,9 @@ func MonitorResourceSchema(ctx context.Context) schema.Schema {
 				MarkdownDescription: "The headers of your request",
 			},
 			"id": schema.NumberAttribute{
-				Optional:            true,
 				Computed:            true,
 				Description:         "The id of the monitor",
 				MarkdownDescription: "The id of the monitor",
-				PlanModifiers: []planmodifier.Number{
-					numberplanmodifier.UseStateForUnknown(),
-				},
 			},
 			"method": schema.StringAttribute{
 				Optional: true,
